@@ -1,0 +1,7 @@
+Hi welcome to Project Database ;)
+	| manual |
+-w- = working;
+-f- = finish;
+-----------------------------------
+	: TODO :
+1. ER diagram; ( 11/02/23 )
