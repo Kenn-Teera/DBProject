@@ -1,16 +1,15 @@
 # Project DATABASE
-## Name's project : My Cafe!! 
 
 -2023-02-25 (Day 0)
 - Start Project 
 - Project Name "MyCafe"
 - Create UI by Figma
 
-## StartDay Project Create Website in 30 Day;
----
+### StartDay Project Create Website in 30 Day;
+
 (Day 1) [01/04/2023]
 
-### Plan
+#### Plan
 
 * Research
 	* React
