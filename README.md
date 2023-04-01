@@ -3,7 +3,26 @@
 
 -2023-02-25 (Day 0)
 - Start Project 
-- Project Name
+- Project Name "MyCafe"
 - Create UI by Figma
-- Research "Topic & Tools"
+
+-StartDay Project Create Website in 30 Day;
+
+---
+(Day 1) [01/04/2023]
+
+### Plan
+
+* Research
+	* React
+	* Responsive Web Design
+	* Nodejs
+
+* https://medium.com/cncx/เริ่มต้น-react-จาก-0-601db519c609
+
+### Responsive Web Design.
+> Why?
+> I need to create Web for "ALL" platform and everyone can use.
+
+---
 
