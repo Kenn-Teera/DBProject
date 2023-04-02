@@ -28,4 +28,7 @@
 
 #### Make ER-Diagram
 
+* Create Table
+
+* Make UI 
 ---
