@@ -30,5 +30,18 @@
 
 * Create Table
 
-* Make UI 
+* Design UI 
+
 ---
+
+(Day 3) [03/04/2023]
+
+#### CRUD
+
+* Use Database Mysql
+
+* Design UI
+
+> R = Research
+
+* (R) ExpressJS
