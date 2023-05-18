@@ -1,0 +1,31 @@
+$moreCream : #F9E6D1;
+//NAVBAR
+.navbar{
+    background-color: $moreCream;
+    .container{
+      padding: 20px 0px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 10px;
+      align-items: center;
+      .logo{
+        img{
+        width: 120px;
+      }
+    }
+      .links{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        margin-left: 10px;
+        gap: 10px;
+        h5 {
+          font-size: 16px;
+          font-weight: 300px;
+        }
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+  }

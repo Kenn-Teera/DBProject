@@ -1,50 +1,15 @@
-# Project DATABASE
+# Project Database 
 
--2023-02-25 (Day 0)
-- Start Project 
-- Project Name "MyCafe"
-- Create UI by Figma
+### Client
 
-### StartDay Project Create Website in 30 Day;
+* React
 
-(Day 1) [01/04/2023]
-
-#### Plan
-
-* Research
-	* React
-	* Nodejs
-	* Responsive Web Design
-
-* https://medium.com/cncx/เริ่มต้น-react-จาก-0-601db519c609
-
-### Responsive Web Design.
-> Why?
-> > I need to create Web for "ALL" platform and everyone can use.
-
+* Figma  
 ---
 
-(Day 2) [02/04/2023]
+### Server
 
-#### Make ER-Diagram
+* MySQL
 
-* Create Table
-
-* Design UI 
-
+* NodeJS
 ---
-
-(Day 3) [03/04/2023]
-
-#### CRUD
-
-* Use Database Mysql
-
-* Design UI
-
-> R = Research
-
-* (R) ExpressJS
-
----
-()

@@ -1,0 +1,64 @@
+$BrownCream : #EDC9A1;
+.Modal{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000a0;
+}
+.Modal-bg{
+    width: 450px;
+    height: 700px;
+    background: white;
+    position: absolute;
+    border-radius: 5%;
+    .nav{
+        padding: 30px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.Modal-img-bg{
+    height: 250px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background: $BrownCream;
+    border-radius: 5%;
+    .image {
+        position: relative;
+        display: block;
+        object-fit: cover;
+        height: auto;
+        width: 250px;
+        right: 11%;
+        top: 2%;
+        margin: 0;
+    }
+}
+
+.text-bg {
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    border-radius: 2%;
+    left:50%;
+    margin-top: 10%;
+    transform: translate(-50%, -50%);
+    h4{
+        text-align: center;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
