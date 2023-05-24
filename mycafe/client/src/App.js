@@ -8,6 +8,7 @@ import {
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Basket from "./pages/Basket";
 //Navbar 
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
       path: "/",
       element:<Home/>,
+      },
+      {
+      path: "/basket",
+      element:<Basket/>,
       }
     ]
   },

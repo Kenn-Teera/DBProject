@@ -1,28 +1,24 @@
 import React,{useState} from 'react'
-import Rectangle from '../components/Rectangle'
-//import Modal from '../components/Modal/Modal'
+//menu
+import Drinks from '../components/menu/Drinks'
+import IceCream from '../components/menu/IceCream';
+import Foods from '../components/menu/Foods';
+import Dessert from '../components/menu/Dessert';
+
+import Modal from '../components/Modal/Modal'
+import ModalF from '../components/Modal/ModalF';
+import Modalc from '../components/Modal/Modalc';
+import ModalD from '../components/Modal/ModalD';
+//images
 import Logo from "../img/Logo_cut.png"
 import well from "../img/Welcome3.png"
-//Drink
-import Capu from '../img/Drink/Coff/Cappuccino_.png'
-import Dalg from '../img/Drink/Coff/dalgona coffee.png'
-import Earl from '../img/Drink/Tea/Earl Grey Tea(1).png'
-import Jasm from '../img/Drink/Tea/Jasmine Tea.png'
-//Food
-import Khaw from '../img/Appetizer/ข้าวโพดทอดนมสด 1.png'
-import Corn from '../img/Appetizer/คอร์นดอกชีส 1.png'
-import Nugg from '../img/Appetizer/นัตเก็ต.png'
-import Pork from '../img/Appetizer/ขนมปังหน้าหมู 1.png'
-//ICE CREAM
-import Choc from '../img/Icecream/Chocolate.png'
-import Cocr from '../img/Icecream/Cookies _ Cream.png'
-import Matc from '../img/Icecream/Matcha.png'
-import Straw from '../img/Icecream/Strawberry_.png'
-//Dessace
-import Cake from '../img/Cake/Cake_.png'
-import Candy from '../img/Cake/candy.png'
-import Cook from '../img/Cake/Cookie_.png'
-import Cup from '../img/Cake/Cupcake_.png'
+
+//data
+import ice from '../Data/Ice';
+import Coff from '../Data/Coff';
+import Dess from '../Data/Dess';
+import food from '../Data/food';
+
 
 const Home = () => {
   const [isEnlarged, setIsEnlarged] = useState(false)
@@ -46,11 +42,64 @@ const Home = () => {
   const handleDessertClick = () => {
     setShowDessertLoader(prevState => !prevState);
   };
+  //modal
+  const [selectedDrink, setDrink] = useState(null);
+  const [selectedFood, setFood] = useState(null);
+  const [selectedIce, setIce] = useState(null);
+  const [selectedDess, setDess] = useState(null);
+
+  function onDrinkOpenClick(theDrink){
+      setDrink(theDrink);
+  }
+  function onFoodOpenClick(theFood){
+      setFood(theFood);
+  }
+  function onIceOpenClick(theIce){
+      setIce(theIce);
+  }
+  function onDessOpenClick(theDess){
+      setDess(theDess);
+  }
+  function CloseModal(){
+    setDrink(null);
+    setFood(null);
+    setDess(null);
+    setIce(null);
+  }
+
+  const DrinkElements = Coff.map((coff, index) => {
+    return <Drinks key={index} Coff={coff} onDrinkClick = {onDrinkOpenClick} />;
+  });
+  const FoodElements = food.map((food, index) => {
+    return <Foods key={index} food={food} onFoodClick = {onFoodOpenClick}/>;
+  });
+  const IceCreamElements = ice.map((ice, index) => {
+    return <IceCream key={index} ice={ice} onIceClick = {onIceOpenClick}/>;
+  });
+  const DessertElements = Dess.map((Dess, index) => {
+    return <Dessert key={index} Dess={Dess} onDessClick = {onDessOpenClick}/>;
+  });
+
+
+  let modal = null;
+  if(!!selectedDrink){
+    modal = <Modal Coff={selectedDrink} onbnClick={CloseModal}/>
+  }
+  else if(!!selectedFood){
+    modal = <ModalF food={selectedFood} onbnClick={CloseModal}/>
+  }
+  else if(!!selectedIce){
+    modal = <Modalc ice={selectedIce} onbnClick={CloseModal}/>
+  }
+  else if(!!selectedDess){
+    modal = <ModalD Dess={selectedDess} onbnClick={CloseModal}/>
+  }
+  
 
   return (
     <div className='home'>
-       <img src= {Logo} alt="" />
-       <img src= {well} alt="" />
+       <img className='img-logo' src= {Logo} alt="" />
+       <img className='img-logo' src= {well} alt="" />
       <div className="text-container" onClick={toggle}>
       <span className="ab">AB</span>
       <span className={`letter ${isEnlarged ? 'enlarged' : ''}`}>
@@ -64,40 +113,29 @@ const Home = () => {
       <p onClick={handleClick}>DRINK</p>
       {showItemLoader && (
         <div className="itemloader">
-          <Rectangle title="Cappuccino" imgURL={Capu}/>
-          <Rectangle title="Dalgona" imgURL={Dalg}/>
-          <Rectangle title="Earl Grey" imgURL={Earl}/>
-          <Rectangle title="Jasmine Tea" imgURL={Jasm}/>
+          {DrinkElements}
         </div>
       )}
       <p onClick={handleFoodClick}>FOOD</p>
       {showFoodLoader && (
         <div className="itemloader">
-          <Rectangle title="Khawpodthod" imgURL={Khaw}/>
-          <Rectangle title="Corn dog" imgURL={Corn}/>
-          <Rectangle title="Nugget" imgURL={Nugg}/>
-          <Rectangle title="Bread Pord" imgURL={Pork}/>
+        {FoodElements}
         </div>
       )}
       <p onClick={handleIceCreamClick}>ICE CREAM</p>
       {showIceCreamLoader && (
         <div className="itemloader">
-          <Rectangle title="Chocolate" imgURL={Choc}/>
-          <Rectangle title="Chocolate Chip" imgURL={Cocr}/>
-          <Rectangle title="Matcha" imgURL={Matc}/>
-          <Rectangle title="Strawberry" imgURL={Straw}/>
+          {IceCreamElements}
         </div>
       )}
       <p onClick={handleDessertClick}>DESSERT</p>
       {showDessertLoader && (
         <div className="itemloader">
-          <Rectangle title="Cake" imgURL={Cake}/>
-          <Rectangle title="Candy" imgURL={Candy}/>
-          <Rectangle title="Cookie" imgURL={Cook}/>
-          <Rectangle title="Cup Cake" imgURL={Cup}/>
+          {DessertElements}
         </div>
       )}
       </div>
+      {modal}
       </div>   
   )
 }

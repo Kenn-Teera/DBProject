@@ -2,8 +2,8 @@ import React from 'react'
 import './Modal.scss'
 import Counter from '../Counter/Counter'
 
-const Modal = (props) => {
-  const { Coff, onbnClick } = props;
+const Modalc = (props) => {
+  const { ice, onbnClick } = props;
   return (
     <div className='Modal'>
       <div className='Modal-bg'>
@@ -12,7 +12,7 @@ const Modal = (props) => {
           <button className='button-ni' onClick={onbnClick}>X</button>
         </div>
         <div className='Modal-content Modal-img-bg'>
-          <img className='image'src={Coff.imgURL} alt="" />
+          <img className='image'src={ice.imgURL} alt="" />
         </div>
           <div className='text-bg'>
             <h4>test</h4>
@@ -28,4 +28,4 @@ const Modal = (props) => {
   )
 }
 
-export default Modal
+export default Modalc

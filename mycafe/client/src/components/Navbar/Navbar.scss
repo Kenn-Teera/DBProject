@@ -2,7 +2,7 @@ $moreCream : #F9E6D1;
 //NAVBAR
 .navbar{
     background-color: $moreCream;
-    .container{
+    .containers{
       padding: 20px 0px;
       display: flex;
       justify-content: space-between;
@@ -13,19 +13,23 @@ $moreCream : #F9E6D1;
         width: 120px;
       }
     }
-      .links{
-        display: flex;
-        align-items: center;
-        margin-right: 10px;
-        margin-left: 10px;
-        gap: 10px;
-        h5 {
-          font-size: 16px;
-          font-weight: 300px;
-        }
-        span {
-          cursor: pointer;
-        }
+    .links{
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-right: 10px;
+      margin-left: 10px;
+      h5 {
+        font-size: 16px;
+        font-weight: 300px;
+      }
+      span {
+        cursor: pointer;
+      }
+      img{
+        width: 40px;
+        cursor: pointer;
       }
     }
   }
+}
