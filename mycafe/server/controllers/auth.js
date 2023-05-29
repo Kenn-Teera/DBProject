@@ -24,6 +24,7 @@ export const register = (req,res) =>{
     })
     //Hash the password and create a user
 }
+
 export const login = (req,res) =>{
     //Check user
     const q = "SELECT * FROM Customer WHERE Cus_email = ?"
@@ -44,6 +45,7 @@ res.cookie("access_token",token , {
 }).status(200).json(other)
 })
 }
+
 export const logout = (req,res) =>{
 res.clearCookie("access_token",{
     sameSite:"none",
